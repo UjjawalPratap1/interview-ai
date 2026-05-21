@@ -2,6 +2,10 @@ require("dotenv").config()
 const app = require('./src/app.js')
 const db = require('./src/config/database.js')
 
+
+
+
+
 const dns = require("dns")
 dns.setServers([
     "1.1.1.1",
@@ -9,6 +13,8 @@ dns.setServers([
 ]
 
 )
+
+
 
 db();
 
