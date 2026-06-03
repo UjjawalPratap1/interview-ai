@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #050816;
+  color: #fff;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top left, rgba(130, 87, 230, 0.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0, 162, 255, 0.2), transparent 35%),
+    #050816;
+  padding: 20px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  border-radius: 24px;
+
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 0 20px rgba(140, 82, 255, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: 1px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+
+    input {
+      height: 55px;
+      padding: 0 16px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+
+      font-size: 15px;
+      outline: none;
+
+      transition: all 0.3s ease;
+
+      &::placeholder {
+        color: #94a3b8;
+      }
+
+      &:focus {
+        border-color: #8b5cf6;
+        box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+      }
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    color: #fff;
+
+    background: linear-gradient(
+      135deg,
+      #8b5cf6,
+      #6366f1
+    );
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+}
+.redirect-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  cursor: pointer;
+
+  a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .form-container {
+    padding: 30px 22px;
+
+    h2 {
+      font-size: 1.7rem;
+    }
+  }
+}
