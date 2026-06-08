@@ -104,6 +104,8 @@ async function loginUserController(req, res){
         }
           
         );
+        console.log("cookie set su");
+        console.log(res.getHeaders());
 
         res.status(200).json({
             message: "User logged in successfully",
