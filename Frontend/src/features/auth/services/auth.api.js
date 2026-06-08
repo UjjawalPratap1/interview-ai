@@ -44,9 +44,10 @@ export async function logout(){
 
 export async function getMe(){
     try {
-const response = await api.get("/api/auth/get-me", )
-return response.data;
-} catch (error) {
-    console.error("Failed to fetch user info:", error);
-}
+        const response = await api.get("/api/auth/get-me");
+        return response.data;
+    } catch (error) {
+        console.error("Failed to fetch user info:", error?.response?.data || error.message || error);
+        throw error;
+    }
 }
