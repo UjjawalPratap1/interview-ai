@@ -8,8 +8,9 @@ const interviewRouter = require('./routes/interview.routes.js')
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5173",
-    credentials: true
+    origin: ["http://localhost:5173",
+    "http://https://interview-ai-qzbc.onrender.com"
+    ],credentials: true
 }))
 app.use("/api/auth", authRouter);
 app.use("/api/interview", interviewRouter);
