@@ -6,10 +6,9 @@ const app = express();
 const interviewRouter = require('./routes/interview.routes.js')
 
 app.use(cors({
-    origin: [
+    origin:
     "http://localhost:5173",
-    "https://interview-ai-front.onrender.com"
-    ],credentials: true
+    credentials: true
 }))
 
 app.use(express.json());
