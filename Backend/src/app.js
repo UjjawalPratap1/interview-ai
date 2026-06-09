@@ -7,7 +7,7 @@ const interviewRouter = require('./routes/interview.routes.js')
 
 app.use(cors({
     origin:
-    "http://localhost:5173",
+    "https://interview-ai-application.onrender.com",
     credentials: true
 }))
 
